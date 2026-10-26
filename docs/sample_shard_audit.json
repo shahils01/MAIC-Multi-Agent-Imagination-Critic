@@ -1,0 +1,746 @@
+{
+  "schema_version": 1,
+  "scope": "read-only sample audit with matching local collector verification; original collection revision unknown",
+  "source_verification": {
+    "repository": "shahils01/AERO-MARL",
+    "branch": "truelyDistMARL",
+    "inspected_commit": "ca3cd38e53cb50d27e6b62ee63da31d79df7f077",
+    "original_collection_commit_known": false,
+    "collector": "mat/runner/shared/mujoco_runner_wds.py",
+    "wrapper": "mat/envs/env_wrappers.py:ShareDummyVecEnv.step_wait",
+    "entrypoint": "mat/scripts/train/eval_manygotogoal.py",
+    "action_record_alignment": "record k contains the action/reward for the transition from record k-1 to the state in record k",
+    "reset_actions": "explicit NaN placeholders, with phase=reset and zero reward",
+    "env_action_scale": 100,
+    "team_reward_reduction": "mean",
+    "team_done_reduction": "all",
+    "terminal_observation": "replaced by reset observation before serialization; terminal rewards/dones/info retained",
+    "simulator_started": false,
+    "external_environment_package": "ManyAgent_GoTOGoal (not vendored in inspected repository)"
+  },
+  "shards": [
+    {
+      "filename": "shard-000033.tar",
+      "bytes": 45445120,
+      "sha256": "fd7f3a0527728054cc848bb2ca3e6f2f249ce6dcc8a6b08b2a51e43709f29fca",
+      "records": 1000,
+      "field_counts": {
+        "actions.npy": 1000,
+        "caption.txt": 1000,
+        "dones.npy": 1000,
+        "edge_index.npy": 1000,
+        "env_actions.npy": 1000,
+        "image.png": 1000,
+        "info.json": 1000,
+        "obs.npy": 1000,
+        "rewards.npy": 1000,
+        "state.npy": 1000,
+        "visibility.npy": 1000
+      },
+      "arrays": {
+        "actions.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                2
+              ],
+              "dtype": "float32",
+              "records": 1000
+            }
+          ],
+          "nonfinite_elements": 70,
+          "nonfinite_records": 7,
+          "finite_min": -0.05001899227499962,
+          "finite_max": 0.08811426907777786
+        },
+        "dones.npy": {
+          "variants": [
+            {
+              "shape": [
+                5
+              ],
+              "dtype": "bool",
+              "records": 1000
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": 0.0,
+          "finite_max": 1.0
+        },
+        "edge_index.npy": {
+          "variants": [
+            {
+              "shape": [
+                2,
+                25
+              ],
+              "dtype": "int64",
+              "records": 1000
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": -1.0,
+          "finite_max": 4.0
+        },
+        "env_actions.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                2
+              ],
+              "dtype": "float32",
+              "records": 1000
+            }
+          ],
+          "nonfinite_elements": 70,
+          "nonfinite_records": 7,
+          "finite_min": -5.001899242401123,
+          "finite_max": 8.811427116394043
+        },
+        "obs.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                29
+              ],
+              "dtype": "float32",
+              "records": 1000
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": -2.9997286796569824,
+          "finite_max": 9.869593620300293
+        },
+        "rewards.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                1
+              ],
+              "dtype": "float64",
+              "records": 993
+            },
+            {
+              "shape": [
+                5,
+                1
+              ],
+              "dtype": "float32",
+              "records": 7
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": -103.96231726172788,
+          "finite_max": 3.135704443086238
+        },
+        "state.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                40
+              ],
+              "dtype": "float32",
+              "records": 1000
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": -5.178836345672607,
+          "finite_max": 9.869593620300293
+        },
+        "visibility.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                5
+              ],
+              "dtype": "int8",
+              "records": 1000
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": 0.0,
+          "finite_max": 1.0
+        }
+      },
+      "episode_segments": [
+        {
+          "episode_id": 227,
+          "has_reset": false,
+          "ending_done": true,
+          "ending_truncated": false,
+          "first_step": 5,
+          "last_step": 68,
+          "records": 64,
+          "contiguous": true
+        },
+        {
+          "episode_id": 228,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": true,
+          "first_step": 0,
+          "last_step": 150,
+          "records": 151,
+          "contiguous": true
+        },
+        {
+          "episode_id": 229,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": true,
+          "first_step": 0,
+          "last_step": 150,
+          "records": 151,
+          "contiguous": true
+        },
+        {
+          "episode_id": 230,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": true,
+          "first_step": 0,
+          "last_step": 150,
+          "records": 151,
+          "contiguous": true
+        },
+        {
+          "episode_id": 231,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": true,
+          "first_step": 0,
+          "last_step": 150,
+          "records": 151,
+          "contiguous": true
+        },
+        {
+          "episode_id": 232,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": false,
+          "first_step": 0,
+          "last_step": 137,
+          "records": 138,
+          "contiguous": true
+        },
+        {
+          "episode_id": 233,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": true,
+          "first_step": 0,
+          "last_step": 150,
+          "records": 151,
+          "contiguous": true
+        },
+        {
+          "episode_id": 234,
+          "has_reset": true,
+          "ending_done": false,
+          "ending_truncated": false,
+          "first_step": 0,
+          "last_step": 42,
+          "records": 43,
+          "contiguous": true
+        }
+      ],
+      "reset_keys": [
+        "000228_000000",
+        "000229_000000",
+        "000230_000000",
+        "000231_000000",
+        "000232_000000",
+        "000233_000000",
+        "000234_000000"
+      ],
+      "terminal_records": [
+        {
+          "key": "000227_000068",
+          "truncated": false
+        },
+        {
+          "key": "000228_000150",
+          "truncated": true
+        },
+        {
+          "key": "000229_000150",
+          "truncated": true
+        },
+        {
+          "key": "000230_000150",
+          "truncated": true
+        },
+        {
+          "key": "000231_000150",
+          "truncated": true
+        },
+        {
+          "key": "000232_000137",
+          "truncated": false
+        },
+        {
+          "key": "000233_000150",
+          "truncated": true
+        }
+      ],
+      "info_container_types": {
+        "list": 993,
+        "dict": 7
+      },
+      "root_metadata_fields": [
+        "done",
+        "episode_id",
+        "infos",
+        "reward_mean",
+        "step_id"
+      ],
+      "agent_metadata_fields": [
+        "alive",
+        "close_neighbors",
+        "collision",
+        "collision_now",
+        "goal",
+        "min_separation",
+        "out_of_bounds",
+        "proximity_penalty",
+        "reached_goal",
+        "team_collision_count",
+        "team_reached_goal_count",
+        "traversability",
+        "truncated",
+        "visibility"
+      ],
+      "live_agent_counts": {
+        "5": 77,
+        "4": 175,
+        "3": 386,
+        "2": 275,
+        "0": 2,
+        "1": 78
+      },
+      "nonfinite_actions_outside_reset": [],
+      "nonfinite_top_level_agent_metadata_values": 2161,
+      "duplicated_global_state_rows": {
+        "matching_records": 1000,
+        "state_records": 1000
+      },
+      "action_scale_check": {
+        "candidate_env_scale": 100,
+        "finite_elements_checked": 9930,
+        "max_absolute_error": 0.0
+      },
+      "done_reduction_disagreements": {
+        "any_agent": 909,
+        "all_agents": 0
+      },
+      "captions_containing_reward": 1000,
+      "terminal_reset_aliases": [
+        {
+          "terminal_key": "000227_000068",
+          "reset_key": "000228_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        },
+        {
+          "terminal_key": "000228_000150",
+          "reset_key": "000229_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        },
+        {
+          "terminal_key": "000229_000150",
+          "reset_key": "000230_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        },
+        {
+          "terminal_key": "000230_000150",
+          "reset_key": "000231_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        },
+        {
+          "terminal_key": "000231_000150",
+          "reset_key": "000232_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        },
+        {
+          "terminal_key": "000232_000137",
+          "reset_key": "000233_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        },
+        {
+          "terminal_key": "000233_000150",
+          "reset_key": "000234_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        }
+      ],
+      "inferred_goal_geometry": {
+        "nonterminal": {
+          "records": 986,
+          "max_distance_error": 5.534231277692925e-07,
+          "max_sin_cos_error": 2.8819355331333174e-07
+        },
+        "terminal": {
+          "records": 7,
+          "max_distance_error": 7.357716750139988,
+          "max_sin_cos_error": 1.88537760209103
+        }
+      },
+      "nonterminal_consecutive_pairs": 985
+    },
+    {
+      "filename": "shard-000285.tar",
+      "bytes": 20203520,
+      "sha256": "6f88792cee6e3c4a3643ba0057e15908dc0ee17f07016badad0882b600e187c7",
+      "records": 436,
+      "field_counts": {
+        "actions.npy": 436,
+        "caption.txt": 436,
+        "dones.npy": 436,
+        "edge_index.npy": 436,
+        "env_actions.npy": 436,
+        "image.png": 436,
+        "info.json": 436,
+        "obs.npy": 436,
+        "rewards.npy": 436,
+        "state.npy": 436,
+        "visibility.npy": 436
+      },
+      "arrays": {
+        "actions.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                2
+              ],
+              "dtype": "float32",
+              "records": 436
+            }
+          ],
+          "nonfinite_elements": 40,
+          "nonfinite_records": 4,
+          "finite_min": -0.04099335893988609,
+          "finite_max": 0.1058548092842102
+        },
+        "dones.npy": {
+          "variants": [
+            {
+              "shape": [
+                5
+              ],
+              "dtype": "bool",
+              "records": 436
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": 0.0,
+          "finite_max": 1.0
+        },
+        "edge_index.npy": {
+          "variants": [
+            {
+              "shape": [
+                2,
+                25
+              ],
+              "dtype": "int64",
+              "records": 436
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": -1.0,
+          "finite_max": 4.0
+        },
+        "env_actions.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                2
+              ],
+              "dtype": "float32",
+              "records": 436
+            }
+          ],
+          "nonfinite_elements": 40,
+          "nonfinite_records": 4,
+          "finite_min": -4.099335670471191,
+          "finite_max": 10.585480690002441
+        },
+        "obs.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                29
+              ],
+              "dtype": "float32",
+              "records": 436
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": -2.9983503818511963,
+          "finite_max": 9.19443416595459
+        },
+        "rewards.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                1
+              ],
+              "dtype": "float64",
+              "records": 432
+            },
+            {
+              "shape": [
+                5,
+                1
+              ],
+              "dtype": "float32",
+              "records": 4
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": -104.4845027450248,
+          "finite_max": 99.58490689897931
+        },
+        "state.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                40
+              ],
+              "dtype": "float32",
+              "records": 436
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": -5.092510223388672,
+          "finite_max": 9.19443416595459
+        },
+        "visibility.npy": {
+          "variants": [
+            {
+              "shape": [
+                5,
+                5
+              ],
+              "dtype": "int8",
+              "records": 436
+            }
+          ],
+          "nonfinite_elements": 0,
+          "nonfinite_records": 0,
+          "finite_min": 0.0,
+          "finite_max": 1.0
+        }
+      },
+      "episode_segments": [
+        {
+          "episode_id": 1995,
+          "has_reset": false,
+          "ending_done": true,
+          "ending_truncated": true,
+          "first_step": 130,
+          "last_step": 150,
+          "records": 21,
+          "contiguous": true
+        },
+        {
+          "episode_id": 1996,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": false,
+          "first_step": 0,
+          "last_step": 24,
+          "records": 25,
+          "contiguous": true
+        },
+        {
+          "episode_id": 1997,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": true,
+          "first_step": 0,
+          "last_step": 150,
+          "records": 151,
+          "contiguous": true
+        },
+        {
+          "episode_id": 1998,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": false,
+          "first_step": 0,
+          "last_step": 87,
+          "records": 88,
+          "contiguous": true
+        },
+        {
+          "episode_id": 1999,
+          "has_reset": true,
+          "ending_done": true,
+          "ending_truncated": true,
+          "first_step": 0,
+          "last_step": 150,
+          "records": 151,
+          "contiguous": true
+        }
+      ],
+      "reset_keys": [
+        "001996_000000",
+        "001997_000000",
+        "001998_000000",
+        "001999_000000"
+      ],
+      "terminal_records": [
+        {
+          "key": "001995_000150",
+          "truncated": true
+        },
+        {
+          "key": "001996_000024",
+          "truncated": false
+        },
+        {
+          "key": "001997_000150",
+          "truncated": true
+        },
+        {
+          "key": "001998_000087",
+          "truncated": false
+        },
+        {
+          "key": "001999_000150",
+          "truncated": true
+        }
+      ],
+      "info_container_types": {
+        "list": 432,
+        "dict": 4
+      },
+      "root_metadata_fields": [
+        "done",
+        "episode_id",
+        "infos",
+        "reward_mean",
+        "step_id"
+      ],
+      "agent_metadata_fields": [
+        "alive",
+        "close_neighbors",
+        "collision",
+        "collision_now",
+        "goal",
+        "min_separation",
+        "out_of_bounds",
+        "proximity_penalty",
+        "reached_goal",
+        "team_collision_count",
+        "team_reached_goal_count",
+        "traversability",
+        "truncated",
+        "visibility"
+      ],
+      "live_agent_counts": {
+        "1": 115,
+        "5": 48,
+        "3": 60,
+        "2": 74,
+        "0": 2,
+        "4": 133
+      },
+      "nonfinite_actions_outside_reset": [],
+      "nonfinite_top_level_agent_metadata_values": 1053,
+      "duplicated_global_state_rows": {
+        "matching_records": 436,
+        "state_records": 436
+      },
+      "action_scale_check": {
+        "candidate_env_scale": 100,
+        "finite_elements_checked": 4320,
+        "max_absolute_error": 0.0
+      },
+      "done_reduction_disagreements": {
+        "any_agent": 379,
+        "all_agents": 0
+      },
+      "captions_containing_reward": 436,
+      "terminal_reset_aliases": [
+        {
+          "terminal_key": "001995_000150",
+          "reset_key": "001996_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        },
+        {
+          "terminal_key": "001996_000024",
+          "reset_key": "001997_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        },
+        {
+          "terminal_key": "001997_000150",
+          "reset_key": "001998_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        },
+        {
+          "terminal_key": "001998_000087",
+          "reset_key": "001999_000000",
+          "state_equal": true,
+          "obs_equal": true,
+          "image_equal": true
+        }
+      ],
+      "inferred_goal_geometry": {
+        "nonterminal": {
+          "records": 427,
+          "max_distance_error": 5.830407285856154e-07,
+          "max_sin_cos_error": 3.691613971734675e-07
+        },
+        "terminal": {
+          "records": 5,
+          "max_distance_error": 7.183908274259916,
+          "max_sin_cos_error": 1.7408530010326366
+        }
+      },
+      "nonterminal_consecutive_pairs": 426
+    }
+  ]
+}
+

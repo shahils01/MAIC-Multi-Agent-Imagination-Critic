@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maic"
+version = "0.1.0"
+description = "Attention-based multi-agent imagination critic"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["torch>=1.12"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+inspect = ["numpy>=1.23"]
+
+[project.scripts]
+maic-demo = "maic.demo:main"
+maic-inspect = "maic.shard_inspection:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
